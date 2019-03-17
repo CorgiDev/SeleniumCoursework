@@ -9,32 +9,42 @@ class EntryPoint
     {
         string url = "http://testing.todvachev.com/selectors/css-path";
         string cssPath = "#post-108 > div > figure > img";
-        string xPath = "//*[@id=\"post-108\"]/div/figure/img";
-        //string xPath = "//*[@id=\"post - 108\"]/div/figure/img";
+        //string xPath = "//*[@id=\"post-108\"]/div/figure/img";
+        string xPath = "//*[@id=\"post - 108\"]/div/figure/img";
 
         IWebDriver driver = new ChromeDriver();
 
         driver.Navigate().GoToUrl(url);
 
-        IWebElement cssPathElement = driver.FindElement(By.CssSelector(cssPath));
-        IWebElement xPathElement = driver.FindElement(By.XPath(xPath));
+        IWebElement cssPathElement;
+        IWebElement xPathElement;
 
-        if (cssPathElement.Displayed)
+        try
         {
-            CorrectMessage("The CSS Path element is visible.");
+            cssPathElement = driver.FindElement(By.CssSelector(cssPath));
+
+            if (cssPathElement.Displayed)
+            {
+                CorrectMessage("The CSS Path element is visible.");
+            }
         }
-        else
+        catch (NoSuchElementException)
         {
             ErrorMessage("The CSS Path element is not present.");
         }
 
-        if (xPathElement.Displayed)
+        try
         {
-            CorrectMessage("The XPath element is visible.");
+            xPathElement = driver.FindElement(By.XPath(xPath));
+
+            if (xPathElement.Displayed)
+            {
+                CorrectMessage("The CSS Path element is visible.");
+            }
         }
-        else
+        catch (NoSuchElementException)
         {
-            ErrorMessage("The XPath element is not present.");
+            ErrorMessage("The CSS Path element is not present.");
         }
 
         driver.Quit();
