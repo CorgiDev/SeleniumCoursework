@@ -7,10 +7,11 @@ class EntryPoint
 {
     static void Main()
     {
-        string url = "http://testing.todvachev.com/selectors/css-path";
-        string cssPath = "#post-108 > div > figure > img";
-        //string xPath = "//*[@id=\"post-108\"]/div/figure/img";
-        string xPath = "//*[@id=\"post - 108\"]/div/figure/img";
+        string url = "http://corgidev.com/about.html";
+        string cssPath = "#wrapper > section > img";
+        //string xPath = "//*[@id=\"wrapper\"]/section/img";
+        //Intentionally incorrect xPath below
+        string xPath = "//*[@id=\"wrappers\"]/section/img"; 
 
         IWebDriver driver = new ChromeDriver();
 

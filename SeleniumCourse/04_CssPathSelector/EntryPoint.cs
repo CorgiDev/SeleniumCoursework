@@ -9,10 +9,10 @@ class EntryPoint
     {
         // The back slashes in the XPath below escape out the quote marks in it. You also have to remember to remove the extra spaces that are often placed within the xPath or else you will get errors. I included a commented out erroneous version with the escaped out quote marks, but the extra spaces not removed so you can see this for yourself by just swapping out which XPath is commented out.
 
-        string url = "http://testing.todvachev.com/selectors/css-path";
-        string cssPath = "#post-108 > div > figure > img";
-        string xPath = "//*[@id=\"post-108\"]/div/figure/img";
-        //string xPath = "//*[@id=\"post - 108\"]/div/figure/img";
+        string url = "http://corgidev.com/about.html";
+        string cssPath = "#wrapper > section > img";
+        string xPath = "//*[@id=\"wrapper\"]/section/img";
+        //string xPath = "//*[@id="wrapper"]/section/img";
 
         IWebDriver driver = new ChromeDriver();
 
