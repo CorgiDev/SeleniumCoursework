@@ -7,8 +7,8 @@ class EntryPoint
 {
     static void Main()
     {
-        string url = "http://testing.todvachev.com/selectors/id/";
-        string ID = "testImage";
+        string url = "http://corgidev.com";
+        string ID = "logo";
 
         IWebDriver driver = new ChromeDriver();
 
