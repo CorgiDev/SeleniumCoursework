@@ -9,9 +9,9 @@ class EntryPoint
     {
         IWebDriver driver = new ChromeDriver();
 
-        driver.Navigate().GoToUrl("http://testing.todvachev.com/selectors/name/");
+        driver.Navigate().GoToUrl("http://corgidev.com/contact.html");
 
-        IWebElement element = driver.FindElement(By.Name("myName"));
+        IWebElement element = driver.FindElement(By.Name("contactForm"));
 
         if (element.Displayed)
         {
