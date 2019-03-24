@@ -40,12 +40,12 @@ class EntryPoint
 
             if (xPathElement.Displayed)
             {
-                CorrectMessage("The CSS Path element is visible.");
+                CorrectMessage("The xPath element is visible.");
             }
         }
         catch (NoSuchElementException)
         {
-            ErrorMessage("The CSS Path element is not present.");
+            ErrorMessage("The xPath element is not present.");
         }
 
         driver.Quit();
