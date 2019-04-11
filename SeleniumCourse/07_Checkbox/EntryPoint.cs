@@ -9,7 +9,7 @@ class EntryPoint
 
     static void Main()
     {
-        string url = "";
+        string url = "http://testing.todarvachev.com/special-elements/check-button-test-3/";
 
         driver.Navigate().GoToUrl(url);
 
