@@ -29,6 +29,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_CheckboxPart3", "09_Chec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_RadioButtonPart2", "11_RadioButton\11_RadioButtonPart2.csproj", "{56CA8BA1-46E0-4B3D-9186-F21D6D551F59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScenario_LoginForm", "15_TestScenario_LoginForm\TestScenario_LoginForm.csproj", "{2CFD536E-5064-439F-ABD4-915202FAE626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScenario_RegisterForm", "16_TestScenario_RegisterForm\TestScenario_RegisterForm.csproj", "{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Scenarios", "Test Scenarios", "{B9AB3A71-3677-4A79-A470-495A7587E7C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,9 +93,21 @@ Global
 		{56CA8BA1-46E0-4B3D-9186-F21D6D551F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56CA8BA1-46E0-4B3D-9186-F21D6D551F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56CA8BA1-46E0-4B3D-9186-F21D6D551F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFD536E-5064-439F-ABD4-915202FAE626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFD536E-5064-439F-ABD4-915202FAE626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFD536E-5064-439F-ABD4-915202FAE626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFD536E-5064-439F-ABD4-915202FAE626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2CFD536E-5064-439F-ABD4-915202FAE626} = {B9AB3A71-3677-4A79-A470-495A7587E7C8}
+		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2} = {B9AB3A71-3677-4A79-A470-495A7587E7C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26B0C786-E770-45DF-A624-FB397A935598}
