@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -12,21 +13,16 @@ class EntryPoint
     {
         string url = "http://testing.todorvachev.com/special-elements/check-button-test-3/";
 
-        //string option = "1";
-        string option = "3";
+        string option = "1";
 
         driver.Navigate().GoToUrl(url);
 
         checkBox = driver.FindElement(By.CssSelector("#post-33 > div > p:nth-child(8) > input[type=\"checkbox\"]:nth-child(" + option + ")"));
 
-        if (checkBox.GetAttribute("checked") == "true")
-        {
-            Console.WriteLine("The checkbox is checked!");
-        }
-        else
-        {
-            Console.WriteLine("The checkbox is not checked!");
-        }
+        checkBox.Click();
+
+        Thread.Sleep(5000);
+
 
         driver.Quit();
     }
