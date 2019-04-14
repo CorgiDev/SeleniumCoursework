@@ -35,6 +35,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScenario_RegisterForm",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Scenarios", "Test Scenarios", "{B9AB3A71-3677-4A79-A470-495A7587E7C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoTest", "AutoTest\AutoTest.csproj", "{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing Philosophy", "Testing Philosophy", "{A97AD972-A7D8-435A-884D-670CEEFFA788}"
+	ProjectSection(SolutionItems) = preProject
+		Testing Philosophy\ExampleMindMap.xmind = Testing Philosophy\ExampleMindMap.xmind
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +108,10 @@ Global
 		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EE4C306-5ABE-473C-8417-DC8B6B08C2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
