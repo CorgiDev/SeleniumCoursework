@@ -4,6 +4,11 @@ namespace AutoTest
 {
     public static class Actions
     {
+        public static void InitializeDriver()
+        {
+            Driver.driver.Navigate().GoToUrl(Config.baseURL);
+        }
+
         public static void FillLoginForm(string username, string password, string repeatPassword)
         {
             LoginScenarioPost lsPost = new LoginScenarioPost();
