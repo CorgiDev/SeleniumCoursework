@@ -1,25 +1,17 @@
 using System;
 using AutoTest;
+using AutoTest.UIElements;
 using NUnit.Framework.Internal;
 using OpenQA.Selenium.Remote;
 
 
-class EntryPoint
+public class EntryPoint
     {
         static void Main()
         {
-            Actions.InitializeDriver();
+            Menu menu = new Menu();
 
-            Driver.driver.Quit();
-
-            //Actions.NavToLoginForm();
-
-            //TestList.InvalidLogin(true);
-
-            //TestList.Validlogin();
-
-            //TestList.ValidRegistration("", "", "", false);
-
-            //Menu.Initialize();
+            Driver.driver.Navigate().GoToUrl("http://testing.todorvachev.com");
+            menu.Selectors.Click();
         }
     }

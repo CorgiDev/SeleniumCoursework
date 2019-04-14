@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace AutoTest
 {
-    class Driver
+    public static class Driver
     {
+        public static IWebDriver driver = new ChromeDriver();
     }
 }
