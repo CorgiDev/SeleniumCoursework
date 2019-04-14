@@ -64,6 +64,8 @@
     <Compile Include="Driver.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="NavigateTo.cs" />
+    <Compile Include="Scenarios\LoginInvalidPassword.cs" />
+    <Compile Include="Scenarios\LoginInvalidUsername.cs" />
     <Compile Include="UIElements\LoginScenarioPost.cs" />
     <Compile Include="UIElements\TestCasesPage.cs" />
     <Compile Include="UIElements\HomePage.cs" />
@@ -80,7 +82,6 @@
   <ItemGroup>
     <Folder Include="Cases\" />
     <Folder Include="Pages\" />
-    <Folder Include="Scenarios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
