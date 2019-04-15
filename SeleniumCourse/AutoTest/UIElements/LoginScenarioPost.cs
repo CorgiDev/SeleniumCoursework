@@ -5,9 +5,9 @@ namespace AutoTest.UIElements
 {
     public class LoginScenarioPost
     {
-        public LoginScenarioPost()
+        public LoginScenarioPost(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.driver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.Name, Using = "userid")]

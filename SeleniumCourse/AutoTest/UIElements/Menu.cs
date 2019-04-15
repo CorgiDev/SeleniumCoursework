@@ -5,9 +5,9 @@ namespace AutoTest.UIElements
 {
     public class Menu
     {
-        public Menu()
+        public Menu(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.driver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         //Each of the below FindsBy corresponds to a menu item in the menu

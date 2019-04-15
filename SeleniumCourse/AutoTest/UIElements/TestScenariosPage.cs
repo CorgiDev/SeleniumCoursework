@@ -11,9 +11,9 @@ namespace AutoTest.UIElements
 {
     public class TestScenariosPage
     {
-        public TestScenariosPage()
+        public TestScenariosPage(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.driver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.CssSelector,
