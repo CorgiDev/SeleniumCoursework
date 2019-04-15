@@ -2,6 +2,7 @@
 {
     public static class Config
     {
+        public static int ElementsWaitingTimeout = 5;
         public static string baseURL = "http://testing.todorvachev.com";
 
         public static class Credentials
@@ -64,7 +65,7 @@
         public static class AlertsTexts
         {
             public static string UsernameLengthOutOfRange = "User Id should not be empty / length be between 5 to 12";
-            public static string PasswordLenghtOutOfRange = "Password should not be empty / length be between 5 to 12";
+            public static string PasswordLengthOutOfRange = "Password should not be empty / length be between 5 to 12";
             public static string SuccessfulLogin = "Succesful login!";
         }
     }

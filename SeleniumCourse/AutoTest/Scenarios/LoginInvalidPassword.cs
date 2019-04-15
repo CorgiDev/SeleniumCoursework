@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using NUnit.Framework;
 
-namespace AutoTest.Scenarios
+namespace AutoTest
 {
     class LoginInvalidPassword
     {
@@ -12,11 +12,11 @@ namespace AutoTest.Scenarios
         {
         }
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Initialize()
         {
             Actions.InitializeDriver();
-            NavigateTo.LoginFormScenarioThroughTestCases();
+            NavigateTo.LoginFormThroughPost();
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace AutoTest.Scenarios
             alert.Accept();
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Driver.driver.Quit();

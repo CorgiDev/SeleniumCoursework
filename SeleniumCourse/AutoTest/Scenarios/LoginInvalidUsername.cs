@@ -12,11 +12,11 @@ namespace AutoTest
         {
         }
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Initialize()
         {
             Actions.InitializeDriver();
-            NavigateTo.LoginFormScenarioThroughTestCases();
+            NavigateTo.LoginFormThroughPost();
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace AutoTest
             alert.Accept();
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Driver.driver.Quit();
