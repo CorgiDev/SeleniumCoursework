@@ -12,18 +12,22 @@ class EntryPoint
 
         driver.Navigate().GoToUrl(url);
 
-        IWebElement image = driver.FindElement(By.CssSelector("#page-17 > div > p:nth-child(1) > a > img"));
+        IWebElement content = driver.FindElement(By.CssSelector("#page-17 > div"));
 
         //driver.Manage().Window.Maximize();
-
         //Console.WriteLine(image.Location.X);
         //Console.WriteLine(image.Location.Y);
         //Console.WriteLine(image.Size.Width);
         //Console.WriteLine(image.Size.Height);
 
-        IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
-        string script = "arguments[0].style[\"display\"] = \"none\"";
+        SetStyle(driver, content, "color", "green");
+    }
 
-        jsExecutor.ExecuteScript(script, image);
+    static void SetStyle(IWebDriver driver, IWebElement element,string style, string styleValue)
+    {
+        string script = String.Format("arguments[0].style[\"{0}\"] = \"{1}d\"", style, styleValue);
+        IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+        
+        jsExecutor.ExecuteScript(script, element);
     }
 }
