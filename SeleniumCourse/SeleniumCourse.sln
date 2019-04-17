@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementLocations", "Element
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selectors", "Selectors", "{49183A82-7ED6-4BCA-B031-1B730E3F21B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserlikeActions", "UserlikeActions\UserlikeActions.csproj", "{236B3360-D6AE-4A93-9CAC-FB549F29F306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,10 @@ Global
 		{37F1922A-9E81-4F26-A4C6-72A360EB8895}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F1922A-9E81-4F26-A4C6-72A360EB8895}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F1922A-9E81-4F26-A4C6-72A360EB8895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236B3360-D6AE-4A93-9CAC-FB549F29F306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236B3360-D6AE-4A93-9CAC-FB549F29F306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236B3360-D6AE-4A93-9CAC-FB549F29F306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236B3360-D6AE-4A93-9CAC-FB549F29F306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
