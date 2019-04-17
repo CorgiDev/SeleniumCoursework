@@ -48,11 +48,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementLocations", "Element
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selectors", "Selectors", "{49183A82-7ED6-4BCA-B031-1B730E3F21B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00_UserlikeActions", "UserlikeActions\00_UserlikeActions.csproj", "{236B3360-D6AE-4A93-9CAC-FB549F29F306}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserlikeActions_A", "UserlikeActions\UserlikeActions_A.csproj", "{236B3360-D6AE-4A93-9CAC-FB549F29F306}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Userlike Actions", "Userlike Actions", "{B0C13397-1C02-41F3-A5FE-D8A42DCF7D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_UserlikeActions", "01_UserlikeActions\01_UserlikeActions.csproj", "{1F7327BF-BDCF-44FF-8187-32A23A529582}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserlikeActions_B", "01_UserlikeActions\UserlikeActions_B.csproj", "{1F7327BF-BDCF-44FF-8187-32A23A529582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
