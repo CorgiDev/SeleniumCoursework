@@ -32,8 +32,13 @@ class EntryPoint
         Actions actions = new Actions(driver);
 
         actions.MoveToElement(elements[0]).Build().Perform();
-
-        //The below section goes through the set of draggable elements on the page and tells me if it is one of the 2 valid colors, or not.
+        
+        ////////////////////////////////////////////
+        // The below section goes through the set
+        // of draggable elements on the page and
+        // tells me if it is one of the 2 valid
+        // colors, or not.
+        ////////////////////////////////////////////
         string lightGreen = "rgba(144, 238, 144, 1)";
         string navajoWhite = "rgba(255, 222, 173, 1)";
 
@@ -55,6 +60,6 @@ class EntryPoint
             {
                 Console.WriteLine("Element number " + (i + 1) + " is not a recognized color.");
             }
-    }
+        }
     }
 }
