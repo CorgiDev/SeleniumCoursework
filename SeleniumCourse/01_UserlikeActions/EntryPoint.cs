@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
@@ -29,7 +30,7 @@ class EntryPoint
             driver.FindElement(By.Id(elementIDs[3]))
         };
 
-        Actions actions = new Actions(driver);
+        //Actions actions = new Actions(driver);
 
         ///////////////////////////////////////////
         //Checks if the color of the 1st element
@@ -43,7 +44,11 @@ class EntryPoint
         //Console.WriteLine(elements[1].GetCssValue("background-color") == lightGreen);
 
         //Drags the first element down to the location of the second element and then releases it.
-        MoveElement(actions, elements[0], elements[1], 0, 10);
+        MoveElement(new Actions(driver), elements[0], elements[1], 0, 10);
+        Thread.Sleep(1000);
+        MoveElement(new Actions(driver), elements[0], elements[2], 0, 10);
+        Thread.Sleep(1000);
+        MoveElement(new Actions(driver), elements[4], elements[1], 0, 10);
     }
 
     static void MoveElement(Actions actions, IWebElement from, IWebElement to, int x = 0, int y = 0)
