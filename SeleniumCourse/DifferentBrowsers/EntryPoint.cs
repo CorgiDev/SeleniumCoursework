@@ -7,10 +7,10 @@ class EntryPoint
 {
     static void Main()
     {
-        IWebDriver fireDriver = new FirefoxDriver();
+        //IWebDriver fireDriver = new FirefoxDriver();
         IWebDriver operaDriver = new OperaDriver();
 
-        fireDriver.Navigate().GoToUrl("http://google.com");
+        //fireDriver.Navigate().GoToUrl("http://google.com");
         operaDriver.Navigate().GoToUrl("http://google.com");
     }
 }
