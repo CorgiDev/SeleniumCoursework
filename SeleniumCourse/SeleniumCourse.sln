@@ -56,6 +56,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentBrowsers", "Differ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SizeAndPosition", "SizeAndPosition\SizeAndPosition.csproj", "{1C84EBB9-B478-4A06-AB64-0EDD14AD6F0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAndTabs", "WindowsAndTabs\WindowsAndTabs.csproj", "{496C34AB-CD3C-4E30-BD3C-5AFE1E5FBEEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +152,10 @@ Global
 		{1C84EBB9-B478-4A06-AB64-0EDD14AD6F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C84EBB9-B478-4A06-AB64-0EDD14AD6F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C84EBB9-B478-4A06-AB64-0EDD14AD6F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496C34AB-CD3C-4E30-BD3C-5AFE1E5FBEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496C34AB-CD3C-4E30-BD3C-5AFE1E5FBEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496C34AB-CD3C-4E30-BD3C-5AFE1E5FBEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496C34AB-CD3C-4E30-BD3C-5AFE1E5FBEEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
