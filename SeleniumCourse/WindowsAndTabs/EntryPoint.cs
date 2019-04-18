@@ -10,8 +10,8 @@ class Program
 {
     static void Main()
     {
+        List<string> handles = new List<string>();
         IWebDriver driver = new ChromeDriver();
-
         IWebElement newTab;
         IWebElement newWindow;
 
@@ -25,5 +25,22 @@ class Program
         newWindow = driver.FindElement(By.CssSelector(newWindowSelector));
 
         newTab.Click();
+
+        handles = driver.WindowHandles.ToList();
+
+        for (int i = 0; i < handles.Count; i++)
+        {
+            System.Console.WriteLine(handles[i]);
+        }
+
+        IWebElement usernameBox = driver.FindElement(By.Name("username"));
+        usernameBox.SendKeys("CarmenSand");
+
+        Console.WriteLine(driver.CurrentWindowHandle);
+        driver.SwitchTo().Window(handles[1]);
+        Console.WriteLine(driver.CurrentWindowHandle);
+
+        IWebElement searchBox = driver.FindElement(By.Name("q"));
+        searchBox.SendKeys("What in the world?");
     }
 }
