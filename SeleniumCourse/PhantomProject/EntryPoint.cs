@@ -1,8 +1,17 @@
 using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
-class Program
+namespace PhantomJS
 {
-    static void Main()
+    class Program
     {
+        static void Main()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
+            IWebDriver driver = new ChromeDriver(options);
+        }
     }
 }
+
