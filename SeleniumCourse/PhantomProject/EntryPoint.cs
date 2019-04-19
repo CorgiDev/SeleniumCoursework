@@ -8,9 +8,19 @@ namespace PhantomJS
     {
         static void Main()
         {
+            //Headless option for ChromeDriver
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
+
+            //ChromeDriver
             IWebDriver driver = new ChromeDriver(options);
+
+            string sitemapURL = "http://testing.todvachev.com/sitemap-posttype-post.xml";
+            string[] pageSource;
+
+            driver.Navigate().GoToUrl(sitemapURL);
+
+            pageSource = driver.PageSource.Split(' ');
         }
     }
 }
