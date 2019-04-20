@@ -30,13 +30,25 @@ class EntryPoint
 
         pageSource = driver.PageSource.Split(' ');
 
+        // Extract all of the post links from the Sitemap.xml.
         foreach (var item in pageSource)
         {
             if (item.Contains(@"href=""http://testing.todvachev.com"))
             {
-                extractedLinks.Add(item);
-                Console.WriteLine(item);
+                startIndex = item.IndexOf(@"href=\", StringComparison.CurrentCulture) + 7;
+                linkLength = item.LastIndexOf(@""">", StringComparison.CurrentCulture) - startIndex;
+
+                //extractedLinks.Add(item.Substring(item.IndexOf(@"href=""http://testing.todvachev.com")));
+                //Console.WriteLine(item.Substring(item.IndexOf(@"href=""http://testing.todvachev.com")));
+
+                extractedLinks.Add(item.Substring(startIndex, linkLength));
             }
+        }
+
+        // Open each of the posts and extract the title and the content.
+        foreach (var item in extractedLinks)
+        {
+            driver.Navigate().GoToUrl(item);
         }
     }
 }
