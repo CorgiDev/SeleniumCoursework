@@ -23,6 +23,9 @@ class EntryPoint
         string sitemapURL = "http://testing.todvachev.com/sitemap-posttype-post.xml";
         string[] pageSource;
 
+        int startIndex = 0;
+        int linkLength = 0;
+
         driver.Navigate().GoToUrl(sitemapURL);
 
         pageSource = driver.PageSource.Split(' ');
