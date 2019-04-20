@@ -29,7 +29,7 @@ class EntryPoint
 
         foreach (var item in pageSource)
         {
-            if (item.Contains("<loc>"))
+            if (item.Contains(@"href=""http://testing.todvachev.com"))
             {
                 extractedLinks.Add(item);
                 Console.WriteLine(item);
