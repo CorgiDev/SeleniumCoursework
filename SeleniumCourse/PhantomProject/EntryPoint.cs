@@ -26,6 +26,7 @@ class EntryPoint
         string titleSelector = "#main-content > article > header > h1";
         string contentSelector = "#main-content > article > div";
         string[] pageSource;
+        string path = "";
 
         IWebElement titleElement;
         IWebElement contentElement;
@@ -89,11 +90,16 @@ class EntryPoint
         ////Create directory to store files in
         Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\ExtractedContent");
 
-        using (StreamWriter sw = File.CreateText(Directory.GetCurrentDirectory() + @"\ExtractedContent\ExtractedTest.txt"))
+        for (int i=0; i < extractedTitles.Count; i++)
         {
-            sw.WriteLine("TITLE: {0}", extractedTitles[0]);
-            sw.WriteLine("CONTENT:");
-            sw.Write(extractedContents[0]);
+            path = String.Format(Directory.GetCurrentDirectory() + @"\ExtractedContent\0{0} {1}.txt", i , extractedTitles[i]);
+
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine("TITLE: {0}", extractedTitles[i]);
+                sw.WriteLine("CONTENT:");
+                sw.Write(extractedContents[i]);
+            }
         }
     }
 }
