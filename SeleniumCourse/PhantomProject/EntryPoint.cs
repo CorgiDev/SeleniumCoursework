@@ -12,6 +12,8 @@ class EntryPoint
     static void Main()
     {
         List<string> extractedLinks = new List<string>();
+        List<string> extractedTitles = new List<string>();
+        List<string> extractedContents = new List<string>();
 
         //Headless option for ChromeDriver
         ChromeOptions options = new ChromeOptions();
@@ -20,7 +22,13 @@ class EntryPoint
         //ChromeDriver
         IWebDriver driver = new ChromeDriver(options);
 
+        IWebElement titleElement;
+        IWebElement contentElement;
+
         string sitemapURL = "http://testing.todvachev.com/sitemap-posttype-post.xml";
+        string titleSelector = "#main-content > article > header > h1";
+        string contentSelector = "#main-content > article > div";
+
         string[] pageSource;
 
         int startIndex = 0;
@@ -49,6 +57,15 @@ class EntryPoint
         foreach (var item in extractedLinks)
         {
             driver.Navigate().GoToUrl(item);
+
+            titleElement = driver.FindElement(By.CssSelector(titleSelector));
+            contentElement = driver.FindElement(By.CssSelector(contentSelector));
+
+            //Console.WriteLine(titleElement.Text);
+            //Console.WriteLine(contentElement.Text);
+
+            extractedTitles.Add(titleElement.Text);
+            extractedContents.Add(contentElement.Text);
         }
     }
 }
