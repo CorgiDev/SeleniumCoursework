@@ -11,25 +11,23 @@ class EntryPoint
 {
     static void Main()
     {
+        //Headless option for ChromeDriver and instantiating the driver
+        ChromeOptions options = new ChromeOptions();
+        options.AddArgument("--headless");
+        IWebDriver driver = new ChromeDriver(options);
+
         List<string> extractedLinks = new List<string>();
         List<string> extractedTitles = new List<string>();
         List<string> extractedContents = new List<string>();
-
-        //Headless option for ChromeDriver
-        ChromeOptions options = new ChromeOptions();
-        options.AddArgument("--headless");
-
-        //ChromeDriver
-        IWebDriver driver = new ChromeDriver(options);
-
-        IWebElement titleElement;
-        IWebElement contentElement;
 
         string sitemapURL = "http://testing.todvachev.com/sitemap-posttype-post.xml";
         string titleSelector = "#main-content > article > header > h1";
         string contentSelector = "#main-content > article > div";
 
         string[] pageSource;
+
+        IWebElement titleElement;
+        IWebElement contentElement;
 
         int startIndex = 0;
         int linkLength = 0;
@@ -56,17 +54,34 @@ class EntryPoint
         // Open each of the posts and extract the title and the content.
         foreach (var item in extractedLinks)
         {
-            driver.Navigate().GoToUrl(item);
+            try
+            {
+                driver.Navigate().GoToUrl(item);
 
-            titleElement = driver.FindElement(By.CssSelector(titleSelector));
-            contentElement = driver.FindElement(By.CssSelector(contentSelector));
+                titleElement = driver.FindElement(By.CssSelector(titleSelector));
+                contentElement = driver.FindElement(By.CssSelector(contentSelector));
 
-            //Console.WriteLine(titleElement.Text);
-            //Console.WriteLine(contentElement.Text);
+                Console.WriteLine(titleElement.Text);
+                Console.WriteLine(contentElement.Text);
 
-            extractedTitles.Add(titleElement.Text);
-            extractedContents.Add(contentElement.Text);
+                //extractedTitles.Add(titleElement.Text);
+                //extractedContents.Add(contentElement.Text);
+            }
+            catch (OpenQA.Selenium.UnhandledAlertException)
+            {
+                Console.WriteLine("The post located at " + item + " was unable to be read.");
+            }
         }
+
+        ////Create directory to store files in
+        //Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\ExtractedContent");
+
+        //using (StreamWriter sw = File.CreateText(Directory.GetCurrentDirectory() + @"\ExtractedContent\ExtractedTest.txt"))
+        //{
+        //    sw.WriteLine("TITLE: {0}", extractedTitles[0]);
+        //    sw.WriteLine("CONTENT:");
+        //    sw.Write(extractedContents[0]);
+        //}
     }
 }
 
