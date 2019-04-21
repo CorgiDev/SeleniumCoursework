@@ -9,6 +9,8 @@ using System.Threading;
 
 class EntryPoint
 {
+    static IAlert alert;
+
     static void Main()
     {
         //Headless option for ChromeDriver and instantiating the driver
@@ -23,7 +25,6 @@ class EntryPoint
         string sitemapURL = "http://testing.todvachev.com/sitemap-posttype-post.xml";
         string titleSelector = "#main-content > article > header > h1";
         string contentSelector = "#main-content > article > div";
-
         string[] pageSource;
 
         IWebElement titleElement;
@@ -61,27 +62,39 @@ class EntryPoint
                 titleElement = driver.FindElement(By.CssSelector(titleSelector));
                 contentElement = driver.FindElement(By.CssSelector(contentSelector));
 
-                Console.WriteLine(titleElement.Text);
-                Console.WriteLine(contentElement.Text);
+                //Console.WriteLine(titleElement.Text);
+                //Console.WriteLine(contentElement.Text);
 
-                //extractedTitles.Add(titleElement.Text);
-                //extractedContents.Add(contentElement.Text);
+                extractedTitles.Add(titleElement.Text);
+                extractedContents.Add(contentElement.Text);
             }
             catch (OpenQA.Selenium.UnhandledAlertException)
             {
-                Console.WriteLine("The post located at " + item + " was unable to be read.");
+                alert = driver.SwitchTo().Alert();
+                alert.Accept();
+
+                titleElement = driver.FindElement(By.CssSelector(titleSelector));
+                contentElement = driver.FindElement(By.CssSelector(contentSelector));
+
+                //Console.WriteLine(titleElement.Text);
+                //Console.WriteLine(contentElement.Text);
+
+                extractedTitles.Add(titleElement.Text);
+                extractedContents.Add(contentElement.Text);
+
+                //Console.WriteLine("The post located at " + item + " was unable to be read.");
             }
         }
 
         ////Create directory to store files in
-        //Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\ExtractedContent");
+        Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\ExtractedContent");
 
-        //using (StreamWriter sw = File.CreateText(Directory.GetCurrentDirectory() + @"\ExtractedContent\ExtractedTest.txt"))
-        //{
-        //    sw.WriteLine("TITLE: {0}", extractedTitles[0]);
-        //    sw.WriteLine("CONTENT:");
-        //    sw.Write(extractedContents[0]);
-        //}
+        using (StreamWriter sw = File.CreateText(Directory.GetCurrentDirectory() + @"\ExtractedContent\ExtractedTest.txt"))
+        {
+            sw.WriteLine("TITLE: {0}", extractedTitles[0]);
+            sw.WriteLine("CONTENT:");
+            sw.Write(extractedContents[0]);
+        }
     }
 }
 
