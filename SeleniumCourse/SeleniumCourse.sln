@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScenario_RegisterForm",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Scenarios", "Test Scenarios", "{B9AB3A71-3677-4A79-A470-495A7587E7C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoTest", "AutoTest\AutoTest.csproj", "{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoTest_A", "AutoTest\AutoTest_A.csproj", "{712791B4-D8A0-484E-B8BB-D8E2BA4943E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing Philosophy", "Testing Philosophy", "{A97AD972-A7D8-435A-884D-670CEEFFA788}"
 	ProjectSection(SolutionItems) = preProject
@@ -61,6 +61,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCloseTabs", "OpenCloseTabs\OpenCloseTabs.csproj", "{ED7CDE57-488F-432C-8188-9EB61B88306E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantomProject", "PhantomProject\PhantomProject.csproj", "{7D0D3213-8D07-4FE7-99D7-4735E53C60F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoTest_B", "AutoTest_B\AutoTest_B.csproj", "{D8ACE37D-4808-492B-9CF1-AB518552B3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +170,10 @@ Global
 		{7D0D3213-8D07-4FE7-99D7-4735E53C60F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D0D3213-8D07-4FE7-99D7-4735E53C60F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D0D3213-8D07-4FE7-99D7-4735E53C60F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8ACE37D-4808-492B-9CF1-AB518552B3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8ACE37D-4808-492B-9CF1-AB518552B3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8ACE37D-4808-492B-9CF1-AB518552B3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8ACE37D-4808-492B-9CF1-AB518552B3FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
