@@ -1,8 +1,11 @@
 ﻿using System;
-using AutoTest;
-using AutoTest.UIElements;
+using AutoTest_B;
+using AutoTest_B.UIElements;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Appium.Android;
+using OpenQA.Selenium.Appium.Enums;
 
 namespace AutoTest_B
 {
@@ -10,7 +13,11 @@ namespace AutoTest_B
     {
         public static IWebDriver InitializeDriver()
         {
-            IWebDriver driver = new ChromeDriver();
+            var capabilities = new DesiredCapabilities();
+            capabilities.SetCapability(MobileCapabilityType.DeviceName, "device");
+            capabilities.SetCapability(MobileCapabilityType.BrowserName, "Chrome");
+
+            IWebDriver driver = new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), capabilities);
             driver.Navigate().GoToUrl(Config.baseURL);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
